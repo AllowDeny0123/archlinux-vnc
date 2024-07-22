@@ -9,7 +9,7 @@ RUN useradd headless && \
 	echo "archlinux" | passwd --stdin headless
 RUN mkdir -p ${HOME}/
 COPY ./start.sh ${HOME}/.
-
+COPY ./bashrc ${HOME}/.bashrc
 RUN mkdir -p ${HOME}/.vnc \
 	&& \
 	echo '#!/bin/sh' > ${HOME}/.vnc/xstartup && \
