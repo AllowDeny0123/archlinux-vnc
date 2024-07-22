@@ -13,3 +13,6 @@ docker run -it --rm -e password='*FILL DESIRED VNC PASSWORD*' -p5901:5901 allowd
 ```
 ## After container built or pulled
 I prefer to use TightVNC client but you can use any VNC client you want and connect to *IP*:5901 with password you set in `docker run` command.
+
+## Notes
+If `--rm` flag persist in your run command container will be deleted after you log out from DE inside container otherwise it just stops
