@@ -11,3 +11,5 @@ docker run -it --rm -e password='*FILL DESIRED VNC PASSWORD*' -p5901:5901 archli
 ```
 docker run -it --rm -e password='*FILL DESIRED VNC PASSWORD*' -p5901:5901 allowdeny/archlinux-vnc
 ```
+## After container built or pulled
+I prefer to use TightVNC client but you can use any VNC client you want and connect to *IP*:5901 with password you set in `docker run` command.
