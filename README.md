@@ -1,4 +1,4 @@
-# archlinux-vnc-container
+# archlinux-vnc
 Archlinux image with installed XFCE, Firefox and TigerVNC for remote access
 ## Run via build
 ```
