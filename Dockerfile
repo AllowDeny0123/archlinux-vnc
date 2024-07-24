@@ -1,6 +1,6 @@
 from archlinux:latest
 
-RUN pacman -Sy --noconfirm xfce4 sudo tigervnc expect firefox
+RUN pacman -Syu --noconfirm xfce4 sudo tigervnc expect firefox
 
 ENV HOME=/home/headless
 
