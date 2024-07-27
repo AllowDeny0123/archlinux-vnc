@@ -5,11 +5,11 @@ Archlinux image with installed XFCE, Firefox and TigerVNC for remote access
 git clone https://github.com/AllowDeny0123/archlinux-vnc.git
 cd archlinux-vnc
 docker build -t archlinux-vnc .
-docker run -it --rm -e password='*FILL DESIRED VNC PASSWORD*' -p5901:5901 archlinux-vnc
+docker run -it --rm -p5901:5901 archlinux-vnc [-p *PASSWORD FOR VNC*] [-w WEBHOOK TO SEND RANDOM PASSWORD]
 ```
 ## Run via DockerHub
 ```
-docker run -it --rm -e password='*FILL DESIRED VNC PASSWORD*' -p5901:5901 allowdeny/archlinux-vnc
+docker run -it --rm -p5901:5901 allowdeny/archlinux-vnc [-p *PASSWORD FOR VNC*] [-w WEBHOOK TO SEND RANDOM PASSWORD]
 ```
 ## After container built or pulled
 I prefer to use TightVNC client but you can use any VNC client you want and connect to *IP*:5901 with password you set in `docker run` command.
