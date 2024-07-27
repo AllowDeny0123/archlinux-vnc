@@ -1,6 +1,6 @@
 from archlinux:latest
 
-RUN pacman -Syu --noconfirm xfce4 sudo tigervnc expect firefox
+RUN pacman -Syu --noconfirm xfce4 pwgen sudo tigervnc expect firefox
 
 ENV HOME=/home/headless
 
@@ -10,6 +10,7 @@ RUN useradd headless && \
 	echo "archlinux" | passwd --stdin headless
 RUN mkdir -p ${HOME}/
 COPY ./start.sh ${HOME}/.
+COPY ./setupvnc.sh ${HOME}/.
 COPY ./bashrc ${HOME}/.bashrc
 RUN mkdir -p ${HOME}/.vnc \
 	&& \
@@ -21,5 +22,5 @@ RUN mkdir -p ${HOME}/.vnc \
 RUN echo "%sudo ALL=(ALL:ALL) ALL" >> /etc/sudoers
 WORKDIR ${HOME}
 USER headless
-ENTRYPOINT ["expect", "./start.sh"]
+ENTRYPOINT ["./start.sh"]
 
