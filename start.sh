@@ -1,5 +1,6 @@
 #!/bin/sh
 
+#Version 1.0
 
 while getopts "p:w:h" OPTION; do
     case "$OPTION" in
