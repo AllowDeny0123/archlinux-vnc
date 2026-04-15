@@ -17,4 +17,4 @@ I prefer to use TightVNC client but you can use any VNC client you want and conn
 ## Notes
 If `--rm` flag persist in your run command container will be deleted after you log out from DE inside container otherwise it just stops
 
-There is only x64 version. If you want to run container on i386 or ARM arch you need to rebuild container from sources
+There is only x64 version. If you want to run container on i386 or ARM arch you need to rebuild container from sources.
