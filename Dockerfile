@@ -1,3 +1,4 @@
+#for ci
 from archlinux:latest
 
 RUN pacman -Syu --noconfirm xfce4 pwgen sudo tigervnc expect firefox
